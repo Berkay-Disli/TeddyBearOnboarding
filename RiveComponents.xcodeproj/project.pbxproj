@@ -20,7 +20,6 @@
 		2345B81D29217B35008361E3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2345B81C29217B35008361E3 /* Home.swift */; };
 		2345B82129217B4A008361E3 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2345B82029217B4A008361E3 /* Onboarding.swift */; };
 		235F619D2921A9C9007472B5 /* loading.riv in Resources */ = {isa = PBXBuildFile; fileRef = 235F619C2921A9C9007472B5 /* loading.riv */; };
-		235F619F2921AD28007472B5 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 235F619E2921AD28007472B5 /* RiveRuntime */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				235F619F2921AD28007472B5 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +180,6 @@
 			);
 			name = RiveComponents;
 			packageProductDependencies = (
-				235F619E2921AD28007472B5 /* RiveRuntime */,
 			);
 			productName = RiveComponents;
 			productReference = 2345B7E729217AA9008361E3 /* RiveComponents.app */;
@@ -671,14 +668,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		235F619E2921AD28007472B5 /* RiveRuntime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2345B82229217BA3008361E3 /* XCRemoteSwiftPackageReference "rive-ios" */;
-			productName = RiveRuntime;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2345B7DF29217AA9008361E3 /* Project object */;
 }
