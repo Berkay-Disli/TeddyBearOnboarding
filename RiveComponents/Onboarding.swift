@@ -164,14 +164,128 @@ struct Onboarding: View {
                 .zIndex(1)
             } else {
                 VStack {
+                    HStack {
+                        Image(systemName: "line.3.horizontal")
+                        Spacer()
+                        Image(systemName: "magnifyingglass")
+                    }
+                    .font(.title3)
+                    .padding(.bottom)
+                    
+                    ScrollView(showsIndicators: false) {
+                        LazyVStack {
+                            VStack(alignment: .leading) {
+                                Text("Hey iosdev22,")
+                                    .font(.title2)
+                                Text("Welcome back. ")
+                                    .font(.largeTitle)
+                                    .foregroundColor(Color("fg"))
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            // MARK: Redacted part-1
+                            
+                            HStack(spacing: 12) {
+                                HStack {
+                                    Image(systemName: "lock")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .clipShape(Circle())
+                                        .frame(width: 56, height: 56)
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("username")
+                                            .font(.subheadline).bold()
+                                            .foregroundColor(.black)
+                                        Text("User fullname ")
+                                            .font(.subheadline)
+                                            .foregroundColor(.gray)
+                                    }
+                                }
+                                Spacer()
+                                HStack {
+                                    Image(systemName: "lock")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .clipShape(Circle())
+                                        .frame(width: 56, height: 56)
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("username")
+                                            .font(.subheadline).bold()
+                                            .foregroundColor(.black)
+                                        Text("User fullname ")
+                                            .font(.subheadline)
+                                            .foregroundColor(.gray)
+                                    }
+                                }
+                            }
+                            .padding(.vertical, 4)
+                            .redacted(reason: .placeholder)
+                            
+                            // MARK: Redacted part-2
+                            
+                                ForEach(1...7, id:\.self) { item in
+                                    VStack(alignment: .leading) {
+                                        HStack(alignment: .top, spacing: 12) {
+                                            Image(systemName:"lock")
+                                                .resizable()
+                                                .scaledToFill()
+                                                .clipShape(Circle())
+                                                .frame(width: 56, height: 56)
+                                            
+                                            VStack(alignment: .leading, spacing: 4) {
+                                                HStack {
+                                                    Text("Something user")
+                                                        .font(.subheadline).bold()
+                                                    Text("username")
+                                                        .foregroundColor(.gray)
+                                                        .font(.caption)
+                                                    Text("2w")
+                                                        .foregroundColor(.gray)
+                                                        .font(.caption)
+                                                }
+                                                Text("Wow I've never felt this good in a while. I love my life and my friends!!")
+                                                    .font(.subheadline)
+                                                    .multilineTextAlignment(.leading)
+                                            }
+                                        }
+                                        HStack {
+                                            Image(systemName: "bubble.left")
+                                                .font(.subheadline)
+                                                .clipShape(Circle())
+                                            Spacer()
+
+                                            Image(systemName: "arrow.2.squarepath")
+                                                .font(.subheadline)
+                                                .clipShape(Circle())
+                                            Spacer()
+                                            
+                                            Image(systemName: "heart")
+                                                .font(.subheadline)
+                                                .foregroundColor(.gray)
+                                                .clipShape(Circle())
+                                            Spacer()
+                                            
+                                            Image(systemName: "bookmark")
+                                                .font(.subheadline)
+                                                .clipShape(Circle())
+                                        }
+                                        .padding()
+                                        .foregroundColor(.gray)
+                                        
+                                        Divider()
+                                    }
+                                    .padding(.vertical, 8)
+                                    .redacted(reason: .placeholder)
+                                }
+                        }
+                    }
+                    
+                    
                     Spacer()
-                    Text("Welcome to my app")
-                        .font(.largeTitle)
-                        .bold()
-                    Text("Berkay Dişli")
-                        .font(.title2)
-                    Spacer()
+                    
                 }
+                .padding(.horizontal)
+                .edgesIgnoringSafeArea(.bottom)
                 .transition(AnyTransition.move(edge: .bottom).animation(.easeInOut))
                 .zIndex(1)
             }
